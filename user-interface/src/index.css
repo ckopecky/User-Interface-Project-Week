@@ -1,22 +1,27 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  max-width: 1200px;
+  width: 100%;
+  font-family: 'Roboto', 'Arial',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .home-header {
-  width: 60%;
-  height: 900px;
-  margin: 0 auto;
+  width: 100%;
+  height: 750px;
   background-image: url("../src/img/home/home-jumbotron.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  padding: 30px 100px;
   color: white;
+  margin:0;
+  padding: 30px 30px 100px 30px;
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -32,15 +37,229 @@ body {
   font-weight: bold;
 }
 
+.navbar {
+  overflow: hidden;
+  font-family: 'Roboto'
+}
+
+.navbar a {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1.6em;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-family: inherit;
+  margin: 0;
+  z-index: 1000;
+
+}
+
+
+.dropdown-content {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(150, 161, 170, 0.7);
+  font-size: 48px;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content a {
+  font-size: 48px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.dropdown-content a:hover {
+  color: #222222;
+}
+.logo {
+  text-decoration: none;
+  color: white;
+}
+
+.closed {
+  background-image: url("./img/nav-hamburger-close.png");
+}
+
+.hamburgerMenu {
+  background-image: url("./img/nav-hamburger.png");
+}
+
 .slug-line {
-  width: 45%;
+  width: 50%;
   display: flex;
   justify-content: flex-start;
   text-align: left;
   font-size: 64px;
   line-height: 75px;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
+.about {
+  display:flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+}
 
+.about-text {
+  width: 50%;
+  margin: 0px 20px;
+  text-align: left;
+}
+
+.about-text h1 {
+  margin: 0;
+}
+
+.about-text img {
+  width: 100%;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  margin: 40px 0px;
+}
+
+.about-button {
+  border: 1px solid #222222;
+  width: 33%;
+  padding: 20px;
+  text-align:center;
+}
+
+.recent-projects {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  margin: 20px;
+}
+
+.recent-project {
+  width: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.recent-project img{
+  width: 100%;
+  position: relative;
+}
+
+.recent-project h2 {
+  position: absolute; 
+  right: 470px;
+  height: 100px;
+  margin-top: -60px;
+  margin-bottom: 50px;
+  width: 400px; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: #D8D8D8;
+  border: 1px solid white;
+}
+
+.recent-project h2 span { 
+  color: white; 
+  font-family: 'Roboto';
+  letter-spacing: 15px;  
+  font-weight: lighter;
+  color: black;
+  padding: 10px; 
+}
+
+.recent-project .left-span {
+  position: absolute; 
+  left: 470px;
+  height: 100px;
+  margin-top: -60px;
+  width: 400px; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: #D8D8D8;
+  border: 1px solid white;
+}
+
+.recent-project p {
+  width: 40%;
+  text-align: left;
+  padding: 0px auto;
+}
+
+.recent-project-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px auto 0px auto;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #9e9898;
+  color: white;
+  height: auto;
+  padding: 30px;
+}
+
+.footer {
+  display: flex;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 20px;
+  margin-left: 30px;
+  width: 35%;
+}
+
+.address {
+  display: flex;
+  width: 65%;
+  padding: 30px;
+  line-height: 25px;
+  justify-content: space-around;
+}
+
+.address-detail {
+  text-align: left;
+}
+
+.input {
+  width: 70%;
+  height: 40px;
+}
