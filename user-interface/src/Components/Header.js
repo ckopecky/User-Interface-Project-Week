@@ -4,8 +4,9 @@ import closed from "../img/nav-hamburger-close.png";
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
+    console.log(props);
     return (
-        <div className="home-header">
+        <div className={props.className}>
             <div className="home-header-nav navbar" >
                 <Link to="/"><div className="logo">{props.logo}</div></Link>
                 <div className="dropdown">
@@ -31,9 +32,7 @@ const Header = (props) => {
                 </div>
             </div>
             <div className="slug-line">
-                Integrity,<br/>
-                Excellence,<br/>
-                Progress.
+                {props.slugline}
             </div>
         </div>
     );

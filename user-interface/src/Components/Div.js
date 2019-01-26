@@ -5,7 +5,7 @@ const Div = (props) => {
         <div className="about-text">
                 <h1>{props.name}</h1>
                 <p>{props.content}</p>
-                <div className="about-button button" >
+                <div className="about-button hidden button" >
                     {props.label}
                 </div>
         </div>           

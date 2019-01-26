@@ -15,45 +15,97 @@ body {
 
 .home-header {
   width: 100%;
-  height: 750px;
+  height: 700px;
   background-image: url("../src/img/home/home-jumbotron.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: white;
   margin:0;
-  padding: 30px 30px 100px 30px;
+  padding: 0px 30px;
   display: flex;
   flex-direction: column;
-  align-items: space-between;
-  justify-content: space-between;
+ 
+}
+
+
+.services-header {
+  width: 100%;
+  height: 300px;
+  background-image: url("../src/img/services/services-jumbotron.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: white;
+  margin:0px;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-header-nav .dropdown {
+  display:flex;
+  justify-content: flex-end;
+}
+
+
+
+
+.contact-header {
+  width: 100%;
+  height: 300px;
+  background-image: url("../src/img/contact/contact-jumbotron.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: white;
+  margin:0px;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-header-nav {
   width: 100%;
+  height: 50%;
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
   font-family: 'Roboto';
   font-size: 24px;
   font-weight: bold;
 }
 
+.home-header-nav a {
+  width: 50%;
+}
+
 .navbar {
   overflow: hidden;
-  font-family: 'Roboto'
+  font-family: 'Roboto';
+  background-color: transparent;
 }
 
 .navbar a {
   display:flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   font-size: 1.6em;
   color: white;
   text-decoration: none;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
 .dropdown {
-  float: right;
   overflow: hidden;
+  width: 50%;
+  display:flex;
+  justify-content: flex-end;
+
 }
 
 .dropdown .dropbtn {
@@ -66,29 +118,32 @@ body {
   margin: 0;
   z-index: 1000;
 
+
 }
 
 
 .dropdown-content {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: rgba(150, 161, 170, 0.7);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
   font-size: 48px;
   z-index: 2;
+  padding-top: 100px;
+  vertical-align: middle;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .dropdown-content a {
   font-size: 48px;
+  text-align: left;
+  width: 100px;
   color: white;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -96,6 +151,7 @@ body {
 .dropdown-content a:hover {
   color: #222222;
 }
+
 .logo {
   text-decoration: none;
   color: white;
@@ -111,8 +167,9 @@ body {
 
 .slug-line {
   width: 50%;
+  height: 40%;
   display: flex;
-  justify-content: flex-start;
+  align-items: flex-end;
   text-align: left;
   font-size: 64px;
   line-height: 75px;
@@ -123,7 +180,7 @@ body {
 .about {
   display:flex;
   justify-content: space-around;
-  margin-bottom: 60px;
+  margin: 60px auto;
   padding-bottom: 60px;
   width: 100%;
 }
@@ -175,7 +232,6 @@ body {
 
 .recent-project h2 {
   position: absolute; 
-  right: 470px;
   height: 100px;
   margin-top: -60px;
   margin-bottom: 50px;
@@ -198,7 +254,6 @@ body {
 
 .recent-project .left-span {
   position: absolute; 
-  left: 470px;
   height: 100px;
   margin-top: -60px;
   width: 400px; 
@@ -227,6 +282,7 @@ body {
 
 .footer-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   background-color: #9e9898;
   color: white;
@@ -263,3 +319,65 @@ body {
   width: 70%;
   height: 40px;
 }
+
+.services-container {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-container .services-p-tab {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  line-height: 30px;
+  margin: 40px auto;
+}
+
+
+.pill-container {
+  width: 100%;
+  margin: 40px auto;
+}
+.nav-pills {
+  display: flex;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+.pills {
+  display: flex;
+  background-color: white;
+  color: black;
+  width: 210px;
+  border-radius: 0 !important;
+  border: 1px solid black;
+  margin-right: 20px;
+  font-size: 1.6em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tab-content {
+  margin: 40px 0px;
+}
+
+.tab-content>.active {
+  display:flex;
+}
+.tab-pane {
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+.tab-pane img {
+  width: 50%;
+}
+.tab-head-p {
+  width: 45%;
+}
+
+
