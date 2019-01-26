@@ -2,7 +2,7 @@ import React from 'react';
 
 const Address = (props) => {
     return (
-        <div style={props.className === "address" ? {display: 'flex', justifyContent: 'space-around', textAlign: 'left'}: {width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '30px', textAlign: 'left'}}>
+        <div style={props.className === "address" ? {display: 'flex', justifyContent: 'space-around', textAlign: 'left'}: {width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: ' 0px 30px', textAlign: 'left'}}>
             <div className="address-detail">
                 <strong className="state">New York</strong><br/>
                 <div className="address-font">123 Lane<br/>

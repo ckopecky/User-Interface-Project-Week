@@ -26,7 +26,7 @@ class Contact extends Component {
                 <div className="form-address">
                 <Form />
                 <div style={{width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <h2 style={{fontSize:"16px", fontWeight: 'bold', width: '35%', textAlign: 'left', marginLeft: '5px'}}>Where We Work</h2>
+                    <h2 style={{fontSize:"16px", fontWeight: 'bold', width: '35%', textAlign: 'left', marginTop: '10'}}>Where We Work</h2>
                     <Address className="contact- address"/>
                 </div>
                 </div>
