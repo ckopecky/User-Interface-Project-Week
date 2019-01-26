@@ -304,15 +304,9 @@ body {
 }
 
 .address {
-  display: flex;
-  width: 65%;
+  width: 50%;
   padding: 30px;
   line-height: 25px;
-  justify-content: space-around;
-}
-
-.address-detail {
-  text-align: left;
 }
 
 .input {
@@ -380,4 +374,18 @@ body {
   width: 45%;
 }
 
+.form-address {
+  display: flex;
+}
+
+.form-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-detail {
+  margin: 20px;
+  width: 200px;
+}
 

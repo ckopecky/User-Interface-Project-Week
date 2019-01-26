@@ -13,7 +13,7 @@ const Footer = () => {
                     
                         <p className="never">We'll never share your email with anyone else.</p>
                 </div>
-                <Address />
+                <Address className="address"/>
             </div>
             <p className="copyright">	Copyright © 2018 Smith and Jones</p>
         </div>

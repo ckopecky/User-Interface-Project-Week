@@ -23,9 +23,15 @@ class Contact extends Component {
                 handleClick={this.props.handleClick}
                 slugline="Contact Us"
                 />
+                <div className="form-address">
                 <Form />
-                <Address />
-                <Footer />
+                <div style={{width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <h2 style={{fontSize:"16px", fontWeight: 'bold', width: '35%', textAlign: 'left', marginLeft: '5px'}}>Where We Work</h2>
+                    <Address className="contact- address"/>
+                </div>
+                </div>
+                
+                <Footer className="address"/>
             </>
             
         );
