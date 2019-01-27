@@ -24,7 +24,7 @@ class Form extends Component {
 
     handleSubmit = (event) => {
         alert(`Your submitted information is: ${this.state.email}  ${this.state.select} ${this.state.textarea} ${this.state["customer-type"]}`);
-        event.preventDefault();
+        window.location.reload();
       }
     render() {
         console.log(this.state);
